@@ -74,6 +74,7 @@ CREATE TABLE fato_tuberculose (
     casos_tb NUMBER(6),
     CONSTRAINT fk_fat_mun FOREIGN KEY(sk_municipio)REFERENCES dim_municipio(sk_municipio),
     CONSTRAINT fk_fat_tempo FOREIGN KEY(sk_tempo)REFERENCES dim_tempo(sk_tempo),
+    CONSTRAINT fk_fat_estacao FOREIGN KEY(sk_estacao)REFERENCES dim_estacao(sk_estacao),
     CONSTRAINT fk_fat_socio FOREIGN KEY(sk_socioeconomico)REFERENCES dim_socioeconomico(sk_socioeconomico),
     CONSTRAINT fk_fat_clima FOREIGN KEY(sk_clima)REFERENCES dim_clima(sk_clima)
 );
