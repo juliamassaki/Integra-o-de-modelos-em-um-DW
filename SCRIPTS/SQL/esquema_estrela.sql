@@ -65,9 +65,10 @@ CREATE TABLE dim_socioeconomico (
 
 -- FATO TUBERCULOSE
 CREATE TABLE fato_tuberculose (
-    sk_fat INT PRIMARY KEY,
+    sk_fat number(10) PRIMARY KEY,
     sk_municipio INT NOT NULL,
     sk_tempo INT NOT NULL,
+    sk_estacao INT NOT NULL,
     sk_socioeconomico INT,
     sk_clima INT,
     casos_tb NUMBER(6),
