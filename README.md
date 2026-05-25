@@ -80,6 +80,11 @@ CREATE TABLE temp_estacoes_json (
 
 ```
 
+### 3.2. Carga dos Dados (Python)
+O script `carga_dados.py` entra em ação. Ele utiliza as bibliotecas pandas e oracledb para ler processar e inserir no banco de dados.
+
+Para garantir alta performance e não sobrecarregar a memória, os dados em lote (CSV) são inseridos utilizando o método executemany, enquanto os XML e JSON são inseridos diretamente em colunas do tipo CLOB e XMLTYPE.
+
 ---
 
 ## 4. O Esquema Estrela (Tabelas Definitivas)
